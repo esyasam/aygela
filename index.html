@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aygela | Çok Yakında</title>
+  <meta name="description" content="The Moment Power Meets Elegance... Doğallık, güç, zarafet ve uyumun kusursuz dengesi Aygela çok yakında sizlerle.">
+  
+  <!-- Favicon References -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  <!-- Google Fonts: Playfair Display & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Premium CSS Design System */
+    :root {
+      --color-primary-dark: #1e3f20;    /* Deep Forest Green */
+      --color-primary-mid: #2e5431;     /* Elegant Sage Green */
+      --color-primary-light: #527555;   /* Light Sage Green */
+      --color-accent-gold: #c5a028;     /* Premium Gold */
+      --color-bg-cream: #fbfaf7;        /* Soft Cream Background */
+      --color-bg-mint: #f3f6f3;         /* Soft Green-Cream */
+      --color-text-dark: #1b261c;       /* Near Black Green */
+      --color-text-muted: #4e5e4f;      /* Soft Charcoal Green */
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Montserrat', Inter, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-bg-cream);
+      background-image: radial-gradient(circle at 50% 50%, var(--color-bg-cream) 0%, var(--color-bg-mint) 100%);
+      color: var(--color-text-dark);
+      font-family: var(--font-sans);
+      line-height: 1.8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient Glow Effects for Ultra-Premium Feel */
+    .ambient-glow-1 {
+      position: absolute;
+      top: -10%;
+      right: -10%;
+      width: 50vw;
+      height: 50vw;
+      background: radial-gradient(circle, rgba(82, 117, 85, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .ambient-glow-2 {
+      position: absolute;
+      bottom: -10%;
+      left: -10%;
+      width: 50vw;
+      height: 50vw;
+      background: radial-gradient(circle, rgba(197, 160, 40, 0.06) 0%, rgba(255, 255, 255, 0) 70%);
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Layout Container */
+    .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 60px 24px;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    /* Header & Logo Styles */
+    .header-logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .logo-frame {
+      width: 200px;
+      height: 200px;
+      border-radius: 24px;
+      background-color: #faf9f6;
+      border: 1px solid rgba(82, 117, 85, 0.15);
+      box-shadow: 0 15px 40px rgba(30, 63, 32, 0.06);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: float 6s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .logo-frame:hover {
+      transform: scale(1.03);
+    }
+
+    /* Status Label */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: rgba(46, 84, 49, 0.08);
+      border: 1px solid rgba(46, 84, 49, 0.15);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-primary-dark);
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+
+    .status-badge::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: var(--color-accent-gold);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--color-accent-gold);
+      animation: pulse 2s infinite;
+    }
+
+    /* Typography Styles */
+    h1 {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      text-align: center;
+      margin-bottom: 15px;
+      letter-spacing: -0.5px;
+    }
+
+    /* Logo Divider */
+    .story-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 30px 0;
+      gap: 15px;
+    }
+
+    .story-divider .line {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(82, 117, 85, 0) 0%, rgba(82, 117, 85, 0.3) 50%, rgba(82, 117, 85, 0) 100%);
+      flex-grow: 1;
+    }
+
+    .story-divider .icon {
+      width: 32px;
+      height: 32px;
+      opacity: 0.85;
+      animation: pulseSlow 3s ease-in-out infinite;
+    }
+
+    /* Glassmorphic Story Card */
+    .story-card {
+      background: rgba(254, 253, 250, 0.65);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(82, 117, 85, 0.1);
+      box-shadow: 
+        0 30px 60px rgba(30, 63, 32, 0.04), 
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      border-radius: 30px;
+      padding: 45px 40px;
+      width: 100%;
+      margin-bottom: 45px;
+      transition: border-color 0.3s ease;
+    }
+
+    .story-card:hover {
+      border-color: rgba(82, 117, 85, 0.2);
+    }
+
+    .story-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-style: italic;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      text-align: center;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .story-title::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background-color: var(--color-accent-gold);
+      margin: 12px auto 0;
+    }
+
+    .story-content {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .story-content p {
+      margin-bottom: 20px;
+    }
+
+    .story-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Specific Callouts inside story */
+    .story-callout {
+      text-align: center;
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      margin: 30px 0;
+      padding: 0 10%;
+      line-height: 1.6;
+    }
+
+    .story-footer {
+      text-align: center;
+      margin-top: 35px;
+      border-top: 1px dashed rgba(82, 117, 85, 0.15);
+      padding-top: 25px;
+    }
+
+    .story-brand {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .story-brand-tagline {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--color-accent-gold);
+    }
+
+    /* Premium Button Styles */
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background-color: var(--color-primary-dark);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 16px 36px;
+      border-radius: 100px;
+      border: 1px solid rgba(197, 160, 40, 0.35);
+      box-shadow: 0 10px 25px rgba(30, 63, 32, 0.15);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .cta-button::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+      transition: 0.5s;
+    }
+
+    .cta-button:hover::after {
+      left: 100%;
+      transition: 0.6s ease;
+    }
+
+    .cta-button:hover {
+      background-color: var(--color-primary-mid);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(30, 63, 32, 0.22);
+      border-color: var(--color-accent-gold);
+    }
+
+    .cta-button:active {
+      transform: translateY(-1px);
+    }
+
+    .cta-button svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* Footer Details */
+    footer {
+      width: 100%;
+      margin-top: 60px;
+      border-top: 1px solid rgba(82, 117, 85, 0.08);
+      padding: 30px 24px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      letter-spacing: 0.5px;
+      z-index: 10;
+    }
+
+    footer p {
+      margin-bottom: 6px;
+    }
+
+    footer .brand-parent {
+      font-weight: 500;
+      color: var(--color-primary-dark);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer .brand-parent:hover {
+      color: var(--color-accent-gold);
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(197, 160, 40, 0.4);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(197, 160, 40, 0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(197, 160, 40, 0);
+      }
+    }
+
+    @keyframes pulseSlow {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.85;
+      }
+      50% {
+        transform: scale(1.08);
+        opacity: 1;
+      }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 600px) {
+      .container {
+        padding: 40px 16px;
+      }
+      .logo-frame {
+        width: 160px;
+        height: 160px;
+        border-radius: 20px;
+      }
+      .story-card {
+        padding: 30px 20px;
+        border-radius: 24px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      .story-title {
+        font-size: 1.35rem;
+      }
+      .story-callout {
+        padding: 0 2%;
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Ambient Glow Blobs -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Main Content Container -->
+  <main class="container">
+    
+    <!-- Top Centered Brand Logo with Floating Frame -->
+    <div class="header-logo-container">
+      <div class="logo-frame">
+        <img src="images/logo.webp" alt="Aygela - Power, Elegance, Harmony" fetchpriority="high">
+      </div>
+      
+      <!-- Premium Badge -->
+      <span class="status-badge" id="status-badge-id">Çok Yakında</span>
+      <h1>Çok Yakında Buradayız</h1>
+    </div>
+
+    <!-- Elegant Divider with Cropped Icon -->
+    <div class="story-divider">
+      <div class="line"></div>
+      <img class="icon" src="images/logo_icon_green.webp" alt="Aygela Icon">
+      <div class="line"></div>
+    </div>
+
+    <!-- Editorial Brand Story Card -->
+    <article class="story-card" id="story-card-id">
+      <h2 class="story-title">The Moment Power Meets Elegance...</h2>
+      
+      <div class="story-content">
+        <p>The story of a brand begins with what it makes people feel in their hearts. The story of Aygela was written by the romantic love between the magnificent contrasts hidden within nature.</p>
+        
+        <p>Here is the unique tale of Aygela, born to accompany every moment of your life:</p>
+        
+        <p>Imagine the moment the wind hits your face... The wild, untamed power awakening within you as you take a brave step into the unknown, deep in the forest. The Moon shining in the sky whispers to you the invincible endurance and nobility of the earth. Just like a free spirit who loves to push boundaries and chase adventures. This is the <strong>Power</strong> of life; the unique energy that is breathtaking, thrilling, and calls you to the very heart of nature.</p>
+        
+        <div class="story-callout">
+          "But after every strong wind comes a tranquil morning..."
+        </div>
+        
+        <p>Imagine the serenity in the steps of a delicate gazelle descending to the water's edge with the first light of the sun. Its gentle touch on the water, the perfection of purification and purity... Just like a silky cream touching your skin after a tiring day, or a fresh, cool breeze wrapping every corner of your home. This is the <strong>Elegance</strong> of life; the magical touch that is compassionate, healing, refreshing, and makes you feel truly "at home."</p>
+        
+        <div class="story-callout">
+          "What if these two souls fell in love?"
+        </div>
+        
+        <p>We intertwined that wild passion for freedom that pushes boundaries with the delicate affection felt in front of the mirror or in a pristine home. We melted the unshakable confidence you feel by the campfire together with the flawless purity you seek for your skin and living spaces, into a single heart, under a single name.</p>
+        
+        <p><strong>Nature's Balance Comes to Your Home</strong><br>
+        Aygela was created for those who want to feel equally safe and special, whether at the peak of the mountains or in the peaceful corner of their warm home.</p>
+        
+        <p>We drew that untamed power in your soul from nature, and that unique elegance reflecting on your body and home from pure water. And we found life's most beautiful secret in the flawless harmony of the two.</p>
+        
+        <p>Because the greatest powers are shaped by elegance, and true elegance harbors an unshakable power within.</p>
+        
+        <!-- Story Footer Signature -->
+        <div class="story-footer">
+          <div class="story-brand">Aygela</div>
+          <div class="story-brand-tagline">Power • Elegance • Harmony</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Social CTA Button (Instagram Link to @es_yasam) -->
+    <a href="https://instagram.com/es_yasam" class="cta-button" id="instagram-cta-id" target="_blank" rel="noopener noreferrer">
+      <!-- Instagram SVG Icon -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.85.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.125-1.664 4.671-4.919 4.819-1.265.058-1.645.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.82-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.125 1.664-4.671 4.919-4.819 1.265-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4.162 4.162 0 1 1 0-8.324 4.162 4.162 0 0 1 0 8.324zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+      </svg>
+      Instagram'da Bizi Takip Edin
+    </a>
+
+  </main>
+
+  <!-- Premium Footer -->
+  <footer>
+    <p>&copy; 2026 Aygela. Tüm Hakları Saklıdır.</p>
+    <p>Bir <a href="https://esyasam.com" class="brand-parent" target="_blank">ES Yaşam</a> Markasıdır.</p>
+  </footer>
+
+</body>
+</html>
